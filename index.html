@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ranjith Kumar V | AI & Cybersecurity Builder</title>
+  <meta name="description" content="Personal portfolio of Ranjith Kumar V. Final-year Cybersecurity student, Google Student Ambassador, Prompt Architect & Hackathon Builder." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+  <!-- Subtle ambient noise & glow backdrop -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-avatar">RV</span>
+        <span class="logo-text">Ranjith Kumar<span class="dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun light-icon"></i>
+          <i class="fa-solid fa-moon dark-icon"></i>
+        </button>
+        <button class="btn btn-sm btn-ghost" id="open-resume-btn">
+          <i class="fa-regular fa-file-pdf"></i> Resume
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-intro">
+          <div class="badge-status">
+            <span class="status-indicator"></span>
+            <span>Available for 2026/2027 Roles in AI/ML & Cybersecurity</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Building at the crossroads of <span class="highlight-cyan">AI systems</span> &amp; <span class="highlight-purple">cyber defense</span>.
+          </h1>
+
+          <p class="hero-bio">
+            Hey, I'm <strong>Ranjith Kumar V</strong> 👋 — a final-year B.E. student specializing in Cybersecurity at EASA College of Engineering &amp; Technology, Coimbatore, based out of Bengaluru.
+            I build pragmatic, LLM-powered applications, design prompt architectures that actually hold up in production, and analyze software through a security-first lens.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              See What I've Built <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <button class="btn btn-secondary copy-email-btn" data-email="vranjith2023@gmail.com">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+            <a href="https://github.com/Vranji2023" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ranjithkumarv002/" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+
+          <div class="quick-facts-row">
+            <div class="fact-item">
+              <span class="fact-num">Google</span>
+              <span class="fact-sub">Student Ambassador ('24-'25)</span>
+            </div>
+            <div class="fact-divider"></div>
+            <div class="fact-item">
+              <span class="fact-num">Finalist</span>
+              <span class="fact-sub">HACKASTORM 2.0 Hackathon</span>
+            </div>
+            <div class="fact-divider"></div>
+            <div class="fact-item">
+              <span class="fact-num">7.7 CGPA</span>
+              <span class="fact-sub">CSE (Cybersecurity)</span>
+            </div>
+            <div class="fact-divider"></div>
+            <div class="fact-item">
+              <span class="fact-num">4 Languages</span>
+              <span class="fact-sub">Tamil, English, Kannada, Telugu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Aside / Human Profile Box -->
+        <div class="hero-bento-card">
+          <div class="bento-header">
+            <div class="bento-avatar-wrapper">
+              <img src="profile.jpg" alt="Ranjith Kumar V" class="bento-profile-img" />
+              <span class="avatar-online-dot" title="Open to opportunities"></span>
+            </div>
+            <div>
+              <h3 class="bento-name">Ranjith Kumar V</h3>
+              <p class="bento-role">AI/ML &bull; Cybersecurity &bull; Rotaract</p>
+            </div>
+          </div>
+
+          <div class="bento-current">
+            <span class="bento-label"><i class="fa-solid fa-bolt"></i> Currently Hacking On:</span>
+            <p class="bento-text">
+              Fine-tuning prompt pipelines, threat hunting workflows, and active community projects.
+            </p>
+          </div>
+
+          <div class="bento-highlights">
+            <div class="bento-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Bengaluru, Karnataka, India</span>
+            </div>
+            <div class="bento-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Graduating in 2027 (Expected)</span>
+            </div>
+            <div class="bento-item">
+              <i class="fa-solid fa-users"></i>
+              <span>Rotaract Member &bull; Club of Hosur (Dist. 2982)</span>
+            </div>
+            <div class="bento-item">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Computer Society of India (CSI) Member</span>
+            </div>
+            <div class="bento-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Deloitte &amp; Anthropic Certified</span>
+            </div>
+          </div>
+
+          <div class="bento-footer">
+            <a href="mailto:vranjith2023@gmail.com" class="bento-cta">
+              <span>Send me a quick note</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-tag">// 01. THE HUMAN BEHIND THE CODE</div>
+        <h2 class="section-title">A bit about me, my path, and what keeps me building.</h2>
+
+        <div class="story-grid">
+          <div class="story-content">
+            <p class="lead-paragraph">
+              I didn't start in tech by memorizing textbooks. I fell in love with it by getting my hands dirty — jumping into hackathons, seeing where software breaks, and figuring out how to build things people can actually use.
+            </p>
+            <p>
+              Right now, I'm a final-year undergrad studying <strong>Cybersecurity</strong> at EASA College of Engineering &amp; Technology. But early on, I realized something important: the next wave of security challenges won't just be broken firewall rules; it will be <em>adversarial prompts, data leaks from LLMs, and securing autonomous AI pipelines</em>.
+            </p>
+            <p>
+              That led me deep into <strong>Prompt Engineering, Natural Language Processing, and Generative AI</strong>. As a <strong>Google Student Ambassador</strong>, I stood on stage in front of rooms full of students at our <em>'Prompt for Hope'</em> workshop, demonstrating live how to steer LLMs with structured prompts and zero fluff. That experience taught me how to break down complex topics into clear, honest engineering concepts.
+            </p>
+            <p>
+              Whether I'm serving as Prompt Lead on a hackathon squad, writing Flask backends, running network traces in Wireshark, or training an OCR food scanner, I care about <strong>clarity, reliability, and security</strong>.
+            </p>
+
+            <div class="my-values">
+              <div class="value-item">
+                <span class="value-index">01</span>
+                <div>
+                  <h4>No "Vibe-Coded" Hacks</h4>
+                  <p>When building with LLMs, I enforce strict JSON schemas and validation logic so apps don't hallucinate or crash on edge cases.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-index">02</span>
+                <div>
+                  <h4>Defense in Depth</h4>
+                  <p>A cybersecurity background means I naturally ask: <em>"What happens when unexpected input hits this endpoint? How does this fail gracefully?"</em></p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-index">03</span>
+                <div>
+                  <h4>Team First, Always</h4>
+                  <p>Hackathons are won by communication, not just code. I love organizing, coordinating, and getting everyone aligned on the goal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Sidebar Info -->
+          <div class="story-sidebar">
+            <div class="sidebar-box">
+              <h3>Snapshot</h3>
+              <ul class="snapshot-list">
+                <li>
+                  <span class="s-label">Education</span>
+                  <span class="s-value">B.E. CSE (Cybersecurity)</span>
+                </li>
+                <li>
+                  <span class="s-label">Institution</span>
+                  <span class="s-value">EASA College of Engg. &amp; Tech</span>
+                </li>
+                <li>
+                  <span class="s-label">College CGPA</span>
+                  <span class="s-value">7.7 / 10.0</span>
+                </li>
+                <li>
+                  <span class="s-label">Schooling</span>
+                  <span class="s-value">Govt. Model HSS (72.5%)</span>
+                </li>
+                <li>
+                  <span class="s-label">Location</span>
+                  <span class="s-value">Bengaluru &bull; Coimbatore</span>
+                </li>
+                <li>
+                  <span class="s-label">Phone</span>
+                  <span class="s-value"><a href="tel:+917550081239">+91 7550081239</a></span>
+                </li>
+                <li>
+                  <span class="s-label">Primary Email</span>
+                  <span class="s-value"><a href="mailto:vranjith2023@gmail.com">vranjith2023@gmail.com</a></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box fun-box">
+              <h3>Beyond The Terminal</h3>
+              <p>Outside of coding and terminal windows, you can find me:</p>
+              <div class="fun-tags">
+                <span>🤝 Rotaract Club of Hosur (District 2982) Member</span>
+                <span>💻 Computer Society of India (CSI) Member</span>
+                <span>🎤 Hosting &amp; coordinating campus tech events</span>
+                <span>🗣️ Multilingual: 4 Indian languages</span>
+                <span>🏆 Brainstorming hackathon problem statements</span>
+                <span>🛡️ Keeping up with CVEs &amp; SecCopilot updates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-tag">// 02. WHAT I'VE ACTUALLY BUILT</div>
+        <h2 class="section-title">Featured Projects &amp; Hackathon Delivery</h2>
+        <p class="section-subtext">Real solutions with clear problems, iterative code, and documented outcomes.</p>
+
+        <div class="projects-list">
+          
+          <!-- Project 1: LandCase AI -->
+          <article class="project-card">
+            <div class="project-meta-bar">
+              <span class="project-pill accent-trophy"><i class="fa-solid fa-trophy"></i> Hackathon Finalist @ HACKASTORM 2.0</span>
+              <span class="project-year">Team of 3</span>
+            </div>
+
+            <div class="project-main-grid">
+              <div class="project-info">
+                <h3 class="project-heading">LandCase AI — AI-Powered Land Dispute &amp; Litigation Tracker</h3>
+                
+                <div class="project-story">
+                  <div class="story-block">
+                    <span class="block-title">The Real Problem:</span>
+                    <p>
+                      Land litigation in India is notorious for taking years and generating mountains of dense, multi-page legal court orders, survey deeds, and petitions. Non-lawyers and property owners have almost no transparent way to track the actual status of a disputed parcel without getting lost in legal jargon.
+                    </p>
+                  </div>
+
+                  <div class="story-block">
+                    <span class="block-title">What I Built &amp; Led:</span>
+                    <p>
+                      I stepped up as the <strong>Prompt Lead &amp; Architect</strong> on our 3-person team. I designed the multi-turn prompt pipeline that ingests messy court summaries and legal claims, forcing deterministic extraction into strict <strong>JSON schemas</strong> so our application never hallucinated court orders or land survey numbers.
+                    </p>
+                    <p>
+                      We built and iterated the entire prototype live inside the <strong>Google Antigravity IDE</strong>, debugging application state, hooking up Flask routes, and pitching the working demo to hackathon evaluators to clinch a finalist spot in <strong>HACKASTORM 2.0</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tech-tag">Prompt Engineering</span>
+                  <span class="tech-tag">Google Antigravity IDE</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">JSON Schema Validation</span>
+                  <span class="tech-tag">LegalTech</span>
+                </div>
+
+                <div class="project-links">
+                  <a href="https://github.com/Vranji2023" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    <i class="fa-brands fa-github"></i> View GitHub Repo
+                  </a>
+                  <button class="btn btn-sm btn-ghost open-details-btn" data-project="landcase">
+                    <i class="fa-solid fa-sliders"></i> Deep Dive &amp; Architecture
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-visual-preview">
+                <div class="preview-box">
+                  <div class="preview-header">
+                    <span class="mac-dot red"></span>
+                    <span class="mac-dot yellow"></span>
+                    <span class="mac-dot green"></span>
+                    <span class="preview-title">landcase_core_prompt.json</span>
+                  </div>
+                  <pre class="preview-code"><code>{
+  <span class="k">"system"</span>: <span class="s">"You are an Indian Land Litigation Analyst."</span>,
+  <span class="k">"constraints"</span>: [
+    <span class="s">"Extract: Survey Number, Disputing Parties, Court Benchmark"</span>,
+    <span class="s">"Return strictly validated JSON against schema v2.1"</span>,
+    <span class="s">"Flag conflicting ownership dates as high-risk anomalies"</span>
+  ],
+  <span class="k">"status"</span>: <span class="s">"Finalist @ HACKASTORM 2.0"</span>
+}</code></pre>
+                  <div class="preview-badge">
+                    <i class="fa-solid fa-check-double"></i> Tested with real case records
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Dr.Dine -->
+          <article class="project-card">
+            <div class="project-meta-bar">
+              <span class="project-pill accent-ml"><i class="fa-solid fa-brain"></i> Machine Learning + OCR</span>
+              <span class="project-year">Dual-Iteration System</span>
+            </div>
+
+            <div class="project-main-grid">
+              <div class="project-info">
+                <h3 class="project-heading">Dr.Dine — Smart Dietary Recommender &amp; Ingredient OCR</h3>
+                
+                <div class="project-story">
+                  <div class="story-block">
+                    <span class="block-title">The Real Problem:</span>
+                    <p>
+                      Packaged foods hide hidden sugars, trans-fats, and allergens under obscure chemical names. People managing specific conditions (like high blood pressure, diabetes, or dietary allergies) can't easily decipher ingredient panels at the grocery store.
+                    </p>
+                  </div>
+
+                  <div class="story-block">
+                    <span class="block-title">How I Built It in Two Iterations:</span>
+                    <p>
+                      <strong>Version 1 (Web MVP):</strong> Started by building a full-stack Flask web application using HTML, CSS, and JavaScript with a custom rule-based recommendation algorithm to match calorie targets and medical profiles.
+                    </p>
+                    <p>
+                      <strong>Version 2 (The ML Upgrade):</strong> Manually typing ingredients felt clunky, so I evolved it into a <strong>Streamlit</strong> application with <strong>Tesseract OCR</strong> integration. Users simply snap a picture of a packaged food label; the OCR extracts the raw text, and a <strong>Logistic Regression model</strong> (trained in Jupyter Notebook) predicts dietary risk and suggests customized meal alternatives.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Tesseract OCR</span>
+                  <span class="tech-tag">Logistic Regression</span>
+                  <span class="tech-tag">Streamlit</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">Pandas &amp; NumPy</span>
+                </div>
+
+                <div class="project-links">
+                  <a href="https://github.com/Vranji2023" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    <i class="fa-brands fa-github"></i> View GitHub Repo
+                  </a>
+                  <button class="btn btn-sm btn-ghost open-details-btn" data-project="drdine">
+                    <i class="fa-solid fa-sliders"></i> Deep Dive &amp; Architecture
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-visual-preview">
+                <div class="preview-box">
+                  <div class="preview-header">
+                    <span class="mac-dot red"></span>
+                    <span class="mac-dot yellow"></span>
+                    <span class="mac-dot green"></span>
+                    <span class="preview-title">ocr_pipeline.py</span>
+                  </div>
+                  <pre class="preview-code"><code><span class="k">def</span> <span class="f">analyze_food_label</span>(image_path, user_profile):
+    raw_text = pytesseract.image_to_string(image_path)
+    clean_ingredients = preprocess_nlp(raw_text)
+    risk_score = model.predict_proba(clean_ingredients)
+    <span class="k">return</span> generate_recommendation(risk_score, user_profile)</code></pre>
+                  <div class="preview-badge">
+                    <i class="fa-solid fa-camera"></i> Live image text extraction
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Ambassador Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-tag">// 03. TRACK RECORD</div>
+        <h2 class="section-title">Experience &amp; Community Leadership</h2>
+        <p class="section-subtext">Where I've applied my skills in the real world.</p>
+
+        <div class="experience-grid">
+          
+          <!-- Experience 1: Google Ambassador -->
+          <div class="experience-card">
+            <div class="exp-badge-top">
+              <span class="exp-role">Google Student Ambassador</span>
+              <span class="exp-period">Sep 2024 – Apr 2025</span>
+            </div>
+            <h4 class="exp-org"><i class="fa-brands fa-google"></i> Google</h4>
+            <p class="exp-desc">
+              Selected to represent Google developer initiatives on campus. This wasn't just wearing a badge — it was active leadership and public speaking:
+            </p>
+            <ul class="exp-points">
+              <li>
+                <strong>Live LLM Demonstration:</strong> Delivered a live workshop demonstration at <em>'Prompt for Hope'</em>, walking hundreds of students through structured prompt engineering, zero-shot/few-shot techniques, and responsible AI usage.
+              </li>
+              <li>
+                <strong>Campus Engagement:</strong> Coordinated events and technical bootcamps connecting students to Google Cloud tools, Gemini APIs, and modern developer best practices.
+              </li>
+              <li>
+                <strong>Peer Mentorship:</strong> Helped junior students overcome the barrier of building their first API-backed applications.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Google Developer Programs</span>
+              <span>Gemini</span>
+              <span>Public Speaking</span>
+              <span>Workshop Delivery</span>
+            </div>
+          </div>
+
+          <!-- Experience 2: Magic Bus Intern -->
+          <div class="experience-card">
+            <div class="exp-badge-top">
+              <span class="exp-role">Young Professional Intern (Hybrid)</span>
+              <span class="exp-period">Jun 2026 – Present</span>
+            </div>
+            <h4 class="exp-org"><i class="fa-solid fa-hands-holding-child"></i> Magic Bus India Foundation</h4>
+            <p class="exp-desc">
+              Engaging in an intensive, structured employability and professional excellence program focused on workplace readiness and leadership:
+            </p>
+            <ul class="exp-points">
+              <li>
+                Engaging in weekly hybrid sessions (in-person workshops and online technical modules) covering corporate communication, client-facing etiquette, and problem diagnosis.
+              </li>
+              <li>
+                Working on cross-functional team simulations, sprint planning, and presenting technical deliverables under real-world organizational constraints.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Workplace Readiness</span>
+              <span>Cross-Functional Teams</span>
+              <span>Professional Communication</span>
+            </div>
+          </div>
+
+          <!-- Experience 3: Rotaract Club of Hosur -->
+          <div class="experience-card">
+            <div class="exp-badge-top">
+              <span class="exp-role">Active Member</span>
+              <span class="exp-period">Active Member</span>
+            </div>
+            <h4 class="exp-org"><i class="fa-solid fa-users"></i> Rotaract Club of Hosur (District 2982)</h4>
+            <p class="exp-desc">
+              Committed youth leadership, social impact initiatives, and community service across Hosur and Rotary International District 2982:
+            </p>
+            <ul class="exp-points">
+              <li>
+                <strong>Community &amp; Social Impact:</strong> Actively participating in community welfare drives, student skill empowerment, and social awareness programs.
+              </li>
+              <li>
+                <strong>Leadership &amp; Event Delivery:</strong> Coordinating district events, youth seminars, fellowship meetings, and team volunteer drives.
+              </li>
+              <li>
+                <strong>Cross-Club Collaboration:</strong> Working with diverse collegiate and community Rotaract clubs across District 2982 to drive impact at scale.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>Rotaract District 2982</span>
+              <span>Community Leadership</span>
+              <span>Event Coordination</span>
+              <span>Social Impact</span>
+            </div>
+          </div>
+
+          <!-- Experience 4: Computer Society of India (CSI) -->
+          <div class="experience-card">
+            <div class="exp-badge-top">
+              <span class="exp-role">Student Member</span>
+              <span class="exp-period">Active Member</span>
+            </div>
+            <h4 class="exp-org"><i class="fa-solid fa-laptop-code"></i> Computer Society of India (CSI)</h4>
+            <p class="exp-desc">
+              Member of India's largest and oldest premier professional body for IT professionals and computer scientists:
+            </p>
+            <ul class="exp-points">
+              <li>
+                <strong>Technical Forums &amp; Symposiums:</strong> Actively engaging in national and regional tech symposiums, developer webinars, and IT conventions.
+              </li>
+              <li>
+                <strong>Cybersecurity &amp; AI Circles:</strong> Participating in specialized knowledge-sharing sessions covering emerging cybersecurity threats, cryptography, and modern software engineering.
+              </li>
+              <li>
+                <strong>Peer Tech Network:</strong> Connecting with industry veterans, academic mentors, and peer engineers across India.
+              </li>
+            </ul>
+            <div class="exp-tags">
+              <span>CSI India</span>
+              <span>Technical Symposiums</span>
+              <span>Cybersecurity Circles</span>
+              <span>Professional Network</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-tag">// 04. TECHNICAL ARSENAL</div>
+        <h2 class="section-title">What I Use to Solve Problems</h2>
+        <p class="section-subtext">The actual languages, frameworks, and security tools I use day-to-day.</p>
+
+        <div class="skills-bento">
+          
+          <!-- Box 1: AI / GenAI -->
+          <div class="skill-tile">
+            <div class="tile-icon icon-cyan"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>AI, ML &amp; Prompt Engineering</h3>
+            <p>Designing repeatable, production-ready AI interactions rather than unpredictable chat experiments.</p>
+            <div class="pill-group">
+              <span class="skill-pill">Prompt Architecture</span>
+              <span class="skill-pill">LLM Schema Validation</span>
+              <span class="skill-pill">ChatGPT &amp; Gemini APIs</span>
+              <span class="skill-pill">NLP Pipelines</span>
+              <span class="skill-pill">Tesseract OCR</span>
+              <span class="skill-pill">Logistic Regression</span>
+            </div>
+          </div>
+
+          <!-- Box 2: Cybersecurity -->
+          <div class="skill-tile">
+            <div class="tile-icon icon-red"><i class="fa-solid fa-shield-virus"></i></div>
+            <h3>Cybersecurity &amp; SecOps</h3>
+            <p>Specialized undergraduate coursework paired with hands-on labs and certifications.</p>
+            <div class="pill-group">
+              <span class="skill-pill">Kali Linux</span>
+              <span class="skill-pill">Wireshark Analysis</span>
+              <span class="skill-pill">Nmap Scanning</span>
+              <span class="skill-pill">Microsoft Security Copilot</span>
+              <span class="skill-pill">Threat Intelligence</span>
+              <span class="skill-pill">Deloitte Security Workflows</span>
+            </div>
+          </div>
+
+          <!-- Box 3: Languages & Databases -->
+          <div class="skill-tile">
+            <div class="tile-icon icon-green"><i class="fa-solid fa-code"></i></div>
+            <h3>Languages &amp; Data</h3>
+            <p>Core programming fundamentals developed through coursework and project building.</p>
+            <div class="pill-group">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Box 4: Frameworks & Cloud -->
+          <div class="skill-tile">
+            <div class="tile-icon icon-purple"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Frameworks &amp; Tooling</h3>
+            <p>Rapid prototyping, micro-services, and interactive dashboards.</p>
+            <div class="pill-group">
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">Streamlit</span>
+              <span class="skill-pill">Pandas &amp; NumPy</span>
+              <span class="skill-pill">AWS Fundamentals</span>
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">Google Antigravity IDE</span>
+            </div>
+          </div>
+
+          <!-- Box 5: Languages Spoken -->
+          <div class="skill-tile tile-wide">
+            <div class="tile-icon icon-amber"><i class="fa-solid fa-language"></i></div>
+            <h3>Multilingual Communication &amp; People Skills</h3>
+            <p>Being able to communicate with diverse teams across South India and globally.</p>
+            <div class="language-cards">
+              <div class="lang-badge">
+                <span class="lang-tit">Tamil</span>
+                <span class="lang-sub">Native &bull; Fluent</span>
+              </div>
+              <div class="lang-badge">
+                <span class="lang-tit">English</span>
+                <span class="lang-sub">Professional Working</span>
+              </div>
+              <div class="lang-badge">
+                <span class="lang-tit">Kannada</span>
+                <span class="lang-sub">Conversational</span>
+              </div>
+              <div class="lang-badge">
+                <span class="lang-tit">Telugu</span>
+                <span class="lang-sub">Conversational</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-tag">// 05. CREDENTIALS</div>
+        <h2 class="section-title">Verified Certifications</h2>
+        <p class="section-subtext">Recognized credentials in LLMs, Threat Intelligence, and Security Ops.</p>
+
+        <div class="certs-list">
+          
+          <div class="cert-item">
+            <div class="cert-brand ms-brand"><i class="fa-brands fa-microsoft"></i></div>
+            <div class="cert-details">
+              <h4>Microsoft Security Copilot</h4>
+              <span class="cert-org">LinkedIn Learning &bull; Jun 2026</span>
+              <p>Applying generative AI assistants in enterprise security monitoring, incident triage, and automated threat hunting.</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-brand anthropic-brand"><i class="fa-solid fa-brain"></i></div>
+            <div class="cert-details">
+              <h4>AI Fluency for Students</h4>
+              <span class="cert-org">Anthropic &bull; May 2026</span>
+              <p>LLM reasoning, foundational prompt design, mitigating bias, and evaluating model alignment for student developers.</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-brand threat-brand"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="cert-details">
+              <h4>Leveraging AI for Threat Intelligence</h4>
+              <span class="cert-org">LinkedIn Learning &bull; May 2026</span>
+              <p>Utilizing machine learning to detect zero-day anomalies, map adversary tactics, and automate threat feeds.</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-brand deloitte-brand"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="cert-details">
+              <h4>Cybersecurity Analyst Virtual Internship</h4>
+              <span class="cert-org">Deloitte via Forage &bull; Aug 2025</span>
+              <p>Simulated hands-on engagement covering risk assessment, breach notification procedures, and network forensics.</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-brand outskill-brand"><i class="fa-solid fa-fire"></i></div>
+            <div class="cert-details">
+              <h4>Generative AI Mastermind</h4>
+              <span class="cert-org">Outskill &bull; Nov 2025</span>
+              <p>Intensive immersion in prompt engineering, autonomous agents, RAG workflows, and multi-model application stacks.</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-brand google-brand"><i class="fa-brands fa-google"></i></div>
+            <div class="cert-details">
+              <h4>Google Gemini Student Ambassador</h4>
+              <span class="cert-org">Google &bull; 2025</span>
+              <p>Official ambassador appointment for demonstrating campus tech leadership and developer education around Gemini models.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-tag">// 06. EDUCATION</div>
+        <h2 class="section-title">Where I'm Learning</h2>
+
+        <div class="edu-container">
+          <div class="edu-card">
+            <div class="edu-card-top">
+              <div>
+                <span class="edu-timing">2023 – 2027 (Expected)</span>
+                <h3>EASA College of Engineering &amp; Technology</h3>
+                <h4 class="edu-degree">B.E. in Computer Science &amp; Engineering (Cybersecurity)</h4>
+                <p class="edu-place"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu</p>
+              </div>
+              <div class="edu-grade">
+                <span class="grade-label">Cumulative CGPA</span>
+                <span class="grade-val">7.7</span>
+              </div>
+            </div>
+            <p class="edu-desc">
+              Focusing on core computer science fundamentals: Data Structures, Operating Systems, Cryptography, Computer Networks, and specialized Cybersecurity modules.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-top">
+              <div>
+                <span class="edu-timing">Completed 2023</span>
+                <h3>Govt. Model Higher Secondary School</h3>
+                <h4 class="edu-degree">Higher Secondary Certificate (HSC)</h4>
+                <p class="edu-place"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+              </div>
+              <div class="edu-grade">
+                <span class="grade-label">Board Score</span>
+                <span class="grade-val">72.5%</span>
+              </div>
+            </div>
+            <p class="edu-desc">
+              Major subjects: Mathematics, Computer Science, Physics, Chemistry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-tag">// 07. LET'S TALK</div>
+        
+        <div class="contact-card">
+          <div class="contact-header">
+            <h2>Ready to talk opportunities or collaborate?</h2>
+            <p>
+              I am actively looking for entry-level roles and internships in <strong>AI/ML Development</strong> and <strong>Cybersecurity Engineering</strong>. Whether you have an open position, a hackathon idea, or just want to discuss LLM prompts — let's talk!
+            </p>
+          </div>
+
+          <div class="contact-links-grid">
+            
+            <a href="mailto:vranjith2023@gmail.com" class="direct-contact-item">
+              <div class="d-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="d-info">
+                <span class="d-label">Send Email</span>
+                <span class="d-value">vranjith2023@gmail.com</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <div class="direct-contact-item copy-email-btn" data-email="vranjith2023@gmail.com" style="cursor: pointer;">
+              <div class="d-icon"><i class="fa-regular fa-copy"></i></div>
+              <div class="d-info">
+                <span class="d-label">One-Click Copy</span>
+                <span class="d-value">Copy Email Address</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-copy"></i></span>
+            </div>
+
+            <a href="tel:+917550081239" class="direct-contact-item">
+              <div class="d-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="d-info">
+                <span class="d-label">Phone / WhatsApp</span>
+                <span class="d-value">+91 7550081239</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ranjithkumarv002/" target="_blank" rel="noopener noreferrer" class="direct-contact-item">
+              <div class="d-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="d-info">
+                <span class="d-label">LinkedIn</span>
+                <span class="d-value">/in/ranjithkumarv002</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <a href="https://github.com/Vranji2023" target="_blank" rel="noopener noreferrer" class="direct-contact-item">
+              <div class="d-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="d-info">
+                <span class="d-label">GitHub</span>
+                <span class="d-value">github.com/Vranji2023</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+
+            <div class="direct-contact-item">
+              <div class="d-icon"><i class="fa-solid fa-map-pin"></i></div>
+              <div class="d-info">
+                <span class="d-label">Location</span>
+                <span class="d-value">Bengaluru, Karnataka, India</span>
+              </div>
+              <span class="d-action"><i class="fa-solid fa-globe"></i></span>
+            </div>
+
+          </div>
+
+          <div class="direct-message-box">
+            <h4>Quick Message Form</h4>
+            <form id="contact-form" onsubmit="handleDirectMessage(event)">
+              <div class="form-row">
+                <input type="text" id="sender-name" placeholder="Your Name" required />
+                <input type="email" id="sender-email" placeholder="Your Email Address" required />
+              </div>
+              <textarea id="sender-message" rows="4" placeholder="What's on your mind? (Role details, hackathon, or general inquiry)" required></textarea>
+              <button type="submit" class="btn btn-primary" id="send-btn">
+                <i class="fa-regular fa-paper-plane"></i> Send to Ranjith
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="resume-backdrop"></div>
+    <div class="modal-box">
+      <div class="modal-top">
+        <div class="modal-title">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Ranjith Kumar V — Resume</span>
+        </div>
+        <button class="modal-close" id="close-resume-btn">&times;</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="doc-header-flex">
+          <img src="profile.jpg" alt="Ranjith Kumar V" class="doc-profile-thumb" />
+          <div>
+            <h2>RANJITH KUMAR V</h2>
+            <p>Bengaluru, Karnataka, India &bull; +91-7550081239 &bull; vranjith2023@gmail.com</p>
+            <p>
+              <a href="https://www.linkedin.com/in/ranjithkumarv002/" target="_blank">LinkedIn Profile</a> &bull; 
+              <a href="https://github.com/Vranji2023" target="_blank">GitHub Profile</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <h3>Summary</h3>
+          <p>
+            Final-year B.E. CSE (Cybersecurity) student graduating 2027, with hands-on project experience in prompt engineering, LLMs, and NLP-based application development. Google Student Ambassador with a track record of hackathon delivery, technical writing, and cross-functional team leadership. Seeking an entry-level role in AI/ML or cybersecurity engineering.
+          </p>
+        </div>
+
+        <div class="doc-section">
+          <h3>Education</h3>
+          <p><strong>EASA College of Engineering &amp; Technology, Coimbatore</strong> (2023 – 2027 Expected)<br>B.E. Computer Science &amp; Engineering (Cybersecurity) &bull; <strong>CGPA: 7.7</strong></p>
+          <p style="margin-top:0.4rem;"><strong>Govt. Model Higher Secondary School</strong> (2023)<br>Higher Secondary Certificate (Mathematics &amp; Computer Science) &bull; <strong>72.5%</strong></p>
+        </div>
+
+        <div class="doc-section">
+          <h3>Experience &amp; Community Leadership</h3>
+          <p><strong>Magic Bus India Foundation — Young Professional Intern (Hybrid)</strong> (Jun 2026 – Present)<br>
+          Completed structured Young Professional employability program combining in-classroom and virtual sessions; applied professional and workplace-readiness skills through weekly hybrid engagement.</p>
+          
+          <p style="margin-top:0.6rem;"><strong>Google — Student Ambassador</strong> (Sep 2024 – Apr 2025)<br>
+          Delivered a live LLM demonstration at the 'Prompt for Hope' workshop; represented Google's developer programs on campus, coordinating events and driving student engagement.</p>
+
+          <p style="margin-top:0.6rem;"><strong>Rotaract Club of Hosur (District 2982) — Active Member</strong><br>
+          Active in youth leadership, community welfare initiatives, event coordination, and cross-club district fellowship across District 2982.</p>
+
+          <p style="margin-top:0.6rem;"><strong>Computer Society of India (CSI) — Student Member</strong><br>
+          Active student member in India's premier computer professional society, participating in technical symposiums, peer networking, and cybersecurity forums.</p>
+        </div>
+
+        <div class="doc-section">
+          <h3>Projects</h3>
+          <p><strong>LandCase AI — AI-Powered Land Litigation Tracker</strong> (Hackathon Finalist, HACKASTORM 2.0)<br>
+          Prompt Lead/Architect on 3-member team; built and iterated using Google Antigravity IDE, designing prompts for app structure, Flask routing, and strict JSON schemas.</p>
+          
+          <p style="margin-top:0.6rem;"><strong>Dr.Dine — Smart Food Recommender</strong><br>
+          Version 1: Python, Flask, HTML, CSS, JavaScript rule-based recommendation app.<br>
+          Version 2: Streamlit, Logistic Regression in Jupyter Notebook, and Tesseract OCR food label image extraction.</p>
+        </div>
+
+        <div class="doc-section">
+          <h3>Certifications</h3>
+          <p>&bull; Microsoft Security Copilot — LinkedIn Learning (Jun 2026)</p>
+          <p>&bull; AI Fluency for Students — Anthropic (May 2026)</p>
+          <p>&bull; Leveraging AI for Threat Intelligence — LinkedIn Learning (May 2026)</p>
+          <p>&bull; Cybersecurity Analyst Virtual Internship — Deloitte via Forage (Aug 2025)</p>
+          <p>&bull; Generative AI Mastermind — Outskill (Nov 2025)</p>
+          <p>&bull; Google Gemini Student Ambassador — Google (2025)</p>
+        </div>
+
+        <div class="doc-section">
+          <h3>Skills</h3>
+          <p><strong>Languages &amp; DB:</strong> C, C++, Python, SQL, MySQL, JavaScript</p>
+          <p><strong>AI/ML:</strong> Prompt Engineering, LLMs (ChatGPT, Gemini), NLP, Generative AI</p>
+          <p><strong>Frameworks &amp; Cloud:</strong> Flask, Streamlit, Pandas, NumPy, AWS</p>
+          <p><strong>Cybersecurity:</strong> Kali Linux, Nmap, Wireshark</p>
+          <p><strong>Multilingual:</strong> Tamil, English, Kannada, Telugu</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="window.print()">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+        <a href="mailto:vranjith2023@gmail.com?subject=Requesting%20Ranjith%20Kumar's%20Resume%20PDF" class="btn btn-primary">
+          <i class="fa-solid fa-envelope"></i> Request Full PDF Copy
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Deep Dive Modal -->
+  <div class="modal" id="proj-modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="proj-backdrop"></div>
+    <div class="modal-box">
+      <div class="modal-top">
+        <div class="modal-title">
+          <i class="fa-solid fa-code-commit"></i>
+          <span id="proj-modal-heading">Project Breakdown</span>
+        </div>
+        <button class="modal-close" id="close-proj-btn">&times;</button>
+      </div>
+      <div class="modal-body" id="proj-modal-body">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p>Built with care by <strong>Ranjith Kumar V</strong> &bull; Bengaluru / Coimbatore</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
