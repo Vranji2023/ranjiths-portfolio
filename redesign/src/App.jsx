@@ -33,7 +33,7 @@ const detail = {
 function Architecture({id}) {
  const [scale,setScale]=useState(1); const [selected,setSelected]=useState(architecture[id][0][0]); const [animate,setAnimate]=useState(true); const [offset,setOffset]=useState({x:0,y:0}); const drag=useRef(null); const svg=useRef(null);
  const nodes=architecture[id];
- const download=()=>{if(!svg.current)return;const s=new XMLSerializer().serializeToString(svg.current);const blob=new Blob([s],{type:'image/svg+xml;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=id+'-architecture.svg';a.click();URL.revokeObjectURL(u);};
+ const download=()=>{if(!svg.current)return;const s=new XMLSerializer().serializeToString(svg.current);const blob=new Blob([s],{type:'image/svg+xml;charset=utf-8'});const u=URL.createObjectURL(blob);const img=new Image();img.onload=()=>{const canvas=document.createElement('canvas');canvas.width=1640;canvas.height=380;const ctx=canvas.getContext('2d');ctx.fillStyle='#07110d';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.scale(2,2);ctx.drawImage(img,0,0,820,190);URL.revokeObjectURL(u);const a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download=id+'-architecture.png';a.click();};img.onerror=()=>URL.revokeObjectURL(u);img.src=u;};
  return <div className="arch-wrap">
   <div className="arch-toolbar"><span className="live-dot"/> <span>INTERACTIVE SYSTEM MAP</span><div className="arch-actions"><button title="Zoom out" onClick={()=>setScale(v=>Math.max(.65,v-.15))}><ZoomOut size={15}/></button><span>{Math.round(scale*100)}%</span><button title="Zoom in" onClick={()=>setScale(v=>Math.min(1.6,v+.15))}><ZoomIn size={15}/></button><button title="Toggle data flow" onClick={()=>setAnimate(v=>!v)}>{animate?'Pause flow':'Play flow'}</button><button title="Download architecture" onClick={download}><Download size={15}/></button></div></div>
   <div className="arch-canvas" onPointerDown={e=>{if(e.target===e.currentTarget){drag.current={x:e.clientX-offset.x,y:e.clientY-offset.y};e.currentTarget.setPointerCapture(e.pointerId)}}} onPointerMove={e=>{if(drag.current)setOffset({x:e.clientX-drag.current.x,y:e.clientY-drag.current.y})}} onPointerUp={()=>drag.current=null}>
@@ -44,7 +44,7 @@ function Architecture({id}) {
    </svg>
   </div>
   <div className="arch-explain"><div><span className="eyebrow">COMPONENT EXPLAINER</span><h4>{selected}</h4><p>{detail[selected]}</p></div><button className="text-button" onClick={()=>setSelected(nodes[(nodes.findIndex(n=>n[0]===selected)+1)%nodes.length][0])}>Next component <ChevronRight size={15}/></button></div>
-  <p className="micro-note">Click a node to inspect it · Drag empty canvas to pan · Use zoom controls. Export SVG is vector format.</p>
+  <p className="micro-note">Click a node to inspect it · Drag empty canvas to pan · Use zoom controls. Download architecture as PNG.</p>
  </div>
 }
 
